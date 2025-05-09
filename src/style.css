@@ -82,7 +82,7 @@ section:nth-of-type(2n + 1){background: var(--corbase1);}
   border: 1px solid rgb(111, 0, 255);
   border-radius: 50%;
   box-shadow: 5px 5px 5px black;
-  background-image: url('/src/perfil.webp');
+  background-image: url('perfil.webp');
   background-position: bottom;
   background-size: cover;}
 
