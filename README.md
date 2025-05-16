@@ -17,4 +17,4 @@ https://encryptkalean.github.io/Meu-Portfolio/
 ## 📫 Contato
 
 - Email: kauanle78@gmail.com
-- LinkedIn: www.linkedin.com/in/kauanleandro
+- LinkedIn: https://www.linkedin.com/in/kauanleandro/
