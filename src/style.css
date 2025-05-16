@@ -184,7 +184,7 @@ h1 {
 
 .projeto:hover,
 .informacoes-projeto:hover {
-  scale: calc(1.05);
+  transform: scale(1.05);
 }
 
 .breve {
@@ -211,15 +211,22 @@ h1 {
   line-height: 25px;
 }
 
-.informacoes-projeto > a {
+.informacoes-projeto a {
+  background-color: transparent !important;
+  display: block;
   padding: 0;
-  border-radius: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .informacoes-projeto h1 {
   font-size: 21px;
   padding-top: 20px;
   margin-bottom: 15px;
+}
+
+.informacoes-projeto P{
+  font-size: 100%;
 }
 
 .informacoes-projeto:hover {
@@ -240,6 +247,18 @@ h1 {
 
 .proj4 {
   background-image: url("calc-preview.webp");
+}
+
+.proj5 {
+  background-image: url("pedra-papel-tesoura-preview.webp");
+}
+
+.proj6 {
+  background-image: url("lista-mercado-preview.webp");
+}
+
+.proj7 {
+  background-image: url("music-player-preview.webp");
 }
 
 /* Habilidades */

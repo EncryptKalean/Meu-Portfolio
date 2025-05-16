@@ -66,7 +66,12 @@
     background-color: #f9b141;
   }
 
-  #habilidades > p, #projetos-mouse {
+  .icons .js img {
+    width: var(--imagemtamanho);
+  }
+
+  #habilidades > p,
+  #projetos-mouse {
     display: none;
   }
 
@@ -74,20 +79,21 @@
     width: 100%;
   }
 
-  .projeto:hover {
-    height: var(--tamanhoprojeto);
-    width: calc(var(--tamanhoprojeto) - 100px);
+  .projeto {
+    transform: scale(1.2);
+    margin-bottom: 100px;
   }
 
-  .informacoes-projeto{
-    opacity: 0.8;
+  .informacoes-projeto {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
-  footer{
+  footer {
     flex-direction: column-reverse;
   }
 
-  footer i{
+  footer i {
     font-size: 40px;
   }
 }
