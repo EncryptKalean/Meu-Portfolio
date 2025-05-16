@@ -1,4 +1,4 @@
-# 👋 Olá! Eu sou [Kauan Leandro]
+# 👋 Olá! Eu sou Kauan Leandro
 
 Sou desenvolvedor front-end apaixonado por tecnologia, inovação e resolução de problemas. Aqui você encontrará alguns dos projetos que desenvolvi e um pouco sobre mim.
 
