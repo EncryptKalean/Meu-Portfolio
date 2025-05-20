@@ -235,30 +235,42 @@ h1 {
 
 .proj1 {
   background-image: url("landing-page-preview.webp");
+  order: 8;
 }
 
 .proj2 {
   background-image: url("youtube-preview.webp");
+  order: 7;
 }
 
 .proj3 {
   background-image: url("form-preview.webp");
+  order: 6;
 }
 
 .proj4 {
   background-image: url("calc-preview.webp");
+  order: 3;
 }
 
 .proj5 {
   background-image: url("pedra-papel-tesoura-preview.webp");
+  order: 4;
 }
 
 .proj6 {
   background-image: url("lista-mercado-preview.webp");
+  order: 5;
 }
 
 .proj7 {
   background-image: url("music-player-preview.webp");
+  order: 2;
+}
+
+.proj8 {
+  background-image: url("lista-de-tarefas-preview.webp");
+  order: 1;
 }
 
 /* Habilidades */
