@@ -244,13 +244,13 @@ h1 {
 }
 
 .proj3 {
-  background-image: url("form-preview.webp");
-  order: 6;
+  background-image: url("formulario-funcional-preview.webp");
+  order: 3;
 }
 
 .proj4 {
   background-image: url("calc-preview.webp");
-  order: 3;
+  order: 6;
 }
 
 .proj5 {
