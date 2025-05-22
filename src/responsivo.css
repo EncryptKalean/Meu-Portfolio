@@ -1,4 +1,4 @@
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   :root {
     --imagemtamanho: 130px;
   }
@@ -45,15 +45,17 @@
     gap: 20px;
   }
 
-  .icons > div {
+  .icons > div, .icons > div:hover {
     width: 95%;
     flex-direction: row;
+    height: 50vw;
+    margin: 10px 0;
   }
 
   .icons > div p {
     min-width: 0;
     margin-left: 0;
-    font-size: 16px;
+    font-size: 100%;
   }
 
   .html {
@@ -73,10 +75,6 @@
   #habilidades > p,
   #projetos-mouse {
     display: none;
-  }
-
-  .icons > div:hover {
-    width: 100%;
   }
 
   .projeto {
