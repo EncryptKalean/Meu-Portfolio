@@ -1,6 +1,7 @@
 @media screen and (max-width: 900px) {
   :root {
     --imagemtamanho: 130px;
+    /* Define o tamanho dos icones das habilidades */
   }
 
   h3 {
@@ -15,7 +16,7 @@
     font-size: 48px;
   }
 
-  ul {
+  header ul {
     display: none;
   }
 
@@ -35,6 +36,20 @@
 
   .container {
     width: 95%;
+  }
+
+  #habilidades > p,
+  #projetos-mouse {
+    display: none;
+  }
+
+  .projeto {
+    margin-bottom: 100px;
+  }
+
+  .informacoes-projeto {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
   }
 
   #habilidades h1 {
@@ -70,21 +85,6 @@
 
   .icons .js img {
     width: var(--imagemtamanho);
-  }
-
-  #habilidades > p,
-  #projetos-mouse {
-    display: none;
-  }
-
-  .projeto {
-    transform: scale(1.2);
-    margin-bottom: 100px;
-  }
-
-  .informacoes-projeto {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.5);
   }
 
   footer {
