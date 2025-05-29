@@ -1,8 +1,5 @@
 section {
   padding: 5%;
-}
-
-section {
   min-height: var(--alturadasection);
   height: 100%;
   text-align: center;

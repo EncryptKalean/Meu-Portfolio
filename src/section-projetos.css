@@ -17,7 +17,7 @@
   width: calc(var(--tamanhoprojeto) - 100px);
   height: var(--tamanhoprojeto);
   border-radius: 10px;
-  box-shadow: 2px 2px 10px blueviolet;
+  box-shadow: 5px 5px 20px 0 blueviolet;
   align-content: center;
   justify-items: center;
   overflow: hidden;
