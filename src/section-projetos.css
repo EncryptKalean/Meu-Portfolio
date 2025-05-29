@@ -1,0 +1,52 @@
+#projetos {
+  display: block;
+}
+
+.container-projetos {
+  width: 100%;
+  min-height: calc(var(--tamanhoprojeto) + 30px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
+  margin: 25px 0;
+}
+
+.projeto {
+  margin: 20px auto;
+  background-color: var(--corbase3);
+  width: calc(var(--tamanhoprojeto) - 100px);
+  height: var(--tamanhoprojeto);
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px 0 blueviolet;
+  align-content: center;
+  justify-items: center;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+
+.informacoes-projeto {
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  padding: 7% 5px 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  line-height: 25px;
+}
+
+.informacoes-projeto h1 {
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+
+.informacoes-projeto P{
+  font-size: 100%;
+}
+
+.informacoes-projeto:hover,
+.informacoes-projeto:focus {
+  opacity: 0.9;
+  background-color: black;
+}

@@ -1,0 +1,59 @@
+#habilidades {
+  display: block;
+  align-content: center;
+  justify-items: center;
+  min-height: calc(var(--alturadasection) - 50px);
+}
+
+.icons {
+  margin: 30px 0;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.icons div {
+  width: calc(var(--imagemtamanho) - 55px);
+  height: var(--imagemtamanho);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+  padding: 1%;
+}
+
+.icons .js img {
+  width: calc(var(--imagemtamanho) - 60px);
+  height: calc(var(--imagemtamanho) - 30px);
+}
+
+.icons i {
+  font-size: var(--imagemtamanho);
+}
+
+.icons > div:hover,
+.icons > div:focus {
+  width: calc(var(--imagemtamanho) * 2 + 50px);
+}
+
+.icons > div p {
+  margin-left: 4px;
+  min-width: calc(var(--imagemtamanho) + 30px);
+}
+
+.html:hover,
+.html:focus {
+  background-color: #f15a2f;
+}
+.css:hover,
+.css:focus {
+  background-color: #1776bc;
+}
+.js:hover,
+.js:focus {
+  background-color: #f9b141;
+}
+a:hover,
+a:focus {
+  background-color: rgba(255, 255, 255, 0.137);
+}
