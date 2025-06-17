@@ -1,0 +1,41 @@
+header {
+  padding: 5%;
+}
+
+header {
+  width: 100dvw;
+  padding: 1% 4%;
+  display: flex;
+  justify-content: space-between;
+  background: var(--corbase2);
+  border-bottom: 2px solid black;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+
+header ul {
+  gap: 30px;
+  display: flex;
+}
+
+header a {
+  transition: 0.3s;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+#inicio {
+  text-align: left;
+}
+
+.perfil-foto {
+  width: 330px;
+  height: 330px;
+  border: 1px solid rgb(111, 0, 255);
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px black;
+  background-image: url("imagens/perfil.webp");
+  background-position: bottom;
+  background-size: cover;
+}

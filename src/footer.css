@@ -1,0 +1,13 @@
+footer {
+  display: flex;
+  background: var(--corbase2);
+  min-height: 40px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1%;
+}
+
+footer i {
+  font-size: 35px;
+  padding: 5px;
+}
