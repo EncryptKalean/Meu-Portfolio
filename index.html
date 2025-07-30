@@ -32,14 +32,15 @@
     <meta property="og:type" content="website" />
 
     <!-- Links -->
-    <link rel="stylesheet" href="src/geral.css" />
-    <link rel="stylesheet" href="src/header.css" />
-    <link rel="stylesheet" href="src/sections.css" />
-    <link rel="stylesheet" href="src/section-sobre.css" />
-    <link rel="stylesheet" href="src/section-projetos.css" />
-    <link rel="stylesheet" href="src/section-habilidades.css" />
-    <link rel="stylesheet" href="src/footer.css" />
-    <link rel="stylesheet" href="src/responsivo.css" />
+    <link rel="stylesheet" href="src/CSS_e_JS/geral.css" />
+    <link rel="stylesheet" href="src/CSS_e_JS/header.css" />
+    <link rel="stylesheet" href="src/CSS_e_JS/sections.css" />
+    <link rel="stylesheet" href="src/CSS_e_JS/section-sobre.css" />
+    <link rel="stylesheet" href="src/CSS_e_JS/section-projetos.css" />
+    <link rel="stylesheet" href="src/CSS_e_JS/exibicao_imagens.css" />
+    <link rel="stylesheet" href="src/CSS_e_JS/section-habilidades.css" />
+    <link rel="stylesheet" href="src/CSS_e_JS/footer.css" />
+    <link rel="stylesheet" href="src/CSS_e_JS/responsivo.css" />
     <link rel="icon" href="src/imagens/icone.ico" type="image/x-icon" />
 
     <!-- Font -->
@@ -83,10 +84,7 @@
           >Github</a
         >
       </div>
-      <div
-        class="hidden perfil-foto"
-        aria-label="Kauan Leandro sorrindo, olhando para o lado ao ar livre durante o dia, com árvores ao fundo."
-      ></div>
+      <img class="hidden perfil-foto" src="src/imagens/perfil.webp" alt="Kauan Leandro sorrindo, olhando para o lado ao ar livre durante o dia, com árvores ao fundo.">
     </section>
     <section id="sobre" tabindex="0">
       <div
@@ -110,10 +108,14 @@
     </section>
     <section id="projetos" tabindex="0">
       <h1>Projetos</h1>
-      <p id="projetos-mouse">
-        *Use o mouse (ou TAB) nos projetos para ver mais informações*
-      </p>
-      <div class="hidden container-projetos">
+      <p>Em</p>
+      <div class="categoria_projetos_btns">
+        <a tabindex="0" id="html" class="categoria_html_btn categoria_selecionada">HTML</a>
+        <a tabindex="0" id="wordpress" class="categoria_wp_btn">Wordpress</a>
+      </div>
+      <p id="projetos-mouse">- Passe o mouse (ou TAB) nos projetos para mais informações.</p>
+      <p>- Clique nos projetos para ver melhor.</p>
+      <div class="hidden container-projetos biblioteca-html">
         <div
           class="hidden projeto"
           role="img"
@@ -283,7 +285,62 @@
           </a>
         </div>
       </div>
-      <p>Esses não são todos os meus projetos, são só os que eu mais gostei.</p>
+      <div class="hidden container-projetos biblioteca-wordpress">
+        <div
+          class="hidden projeto"
+          role="img"
+          aria-label="Interface de uma lista de tarefas com modo claro e escuro."
+          style="background-image: url('src/previews/wordpress-galeria-preview-1.webp')"
+          id="galeria"
+          quantidadeDeImagem="3"
+        >
+          <a class="informacoes-projeto" href="javascript:void(0)">
+            <h1>Galeria de Fotos</h1>
+            <p>
+              Este projeto foi desenvolvido como parte de um exercício de aprimoramento em WordPress, com o objetivo de criar um portfólio digital voltado para fotógrafos. O design minimalista e elegante foi pensado para destacar imagens de forma impactante, transmitindo profissionalismo e foco na estética visual.
+              <br>
+              <br>
+              A página principal apresenta uma saudação acolhedora, uma breve descrição sobre o fotógrafo e um botão de chamada para ação, convidando o visitante a explorar o trabalho. A galeria inicial conta com imagens de paisagens, arquitetura e natureza, ilustrando o potencial de uso para exibição fotográfica. O projeto também inclui uma seção "Sobre Mim" e ícones de redes sociais.
+            </p>
+          </a>
+        </div>
+        <div
+          class="hidden projeto"
+          role="img"
+          aria-label="Interface de uma lista de tarefas com modo claro e escuro."
+          style="background-image: url('src/previews/wordpress-quilombo-preview-1.webp')"
+          id="quilombo"
+          quantidadeDeImagem="2"
+        >
+          <a class="informacoes-projeto" href="javascript:void(0)">
+            <h1>Instituto Quilombo</h1>
+            <p>Projeto desenvolvido como exercício no WordPress, com o objetivo de criar um site institucional fictício voltado à uma causa. O layout valoriza a cultura e identidade do grupo, com seções sobre a origem, objetivos e uma área dedicada a notícias que fortalecem a representatividade.
+            <br>
+            <br>
+            A estrutura do site foi planejada para facilitar o acesso às informações e promover o engajamento, explorando ferramentas como temas, páginas estáticas e widgets. Uma experiência enriquecedora tanto no aspecto técnico quanto cultural.
+            </p>
+          </a>
+        </div>
+        <div
+          class="hidden projeto"
+          role="img"
+          aria-label="Interface de uma lista de tarefas com modo claro e escuro."
+          style="background-image: url('src/previews/wordpress-intitucional-preview-1.webp')"
+          id="intitucional"
+          quantidadeDeImagem="1"
+        >
+          <a class="informacoes-projeto" href="javascript:void(0)">
+            <h1>Landing Page Institucional</h1>
+            <p>
+              Este projeto foi idealizado como um exercício prático em WordPress, com foco na criação de uma landing page institucional simples e funcional. A proposta foi simular a apresentação de um grupo fictício de consultoria empresarial, destacando elementos essenciais de uma página voltada à captação de clientes.
+              <br>
+              <br>
+              O layout é direto e moderno, contendo seções como: banner com chamada de impacto, apresentação dos serviços oferecidos, área “Sobre Nós” com descrição institucional e imagem temática, além de rodapé com informações de contato e ícones de redes sociais. Tudo foi estruturado para garantir uma navegação fluida e clara, mesmo em um design minimalista.
+            </p>
+          </a>
+        </div>
+      </div>
+      <p>Não são todos os meus projetos, são só os que eu mais gostei.</p>
       <a
         href="https://github.com/EncryptKalean"
         target="_blank"
@@ -339,6 +396,19 @@
         ><i class="fa-brands fa-linkedin"></i
       ></a>
     </footer>
-    <script src="src/script.js"></script>
+    <div class="botoes_container">
+      <div class="seta_esquerda"></div>
+      <div class="seta_direita"></div>
+      <div class="fechar"><-- Voltar</div>
+    </div>
+    <section class="exibicao_imagens">
+      <div class="alerta">
+        <h3>observação</h3>
+        <p>A imagem abaixo representa como o projeto WordPress aparece em uma tela cheia. O objetivo é mostrar a experiência visual completa, como se estivesse navegando no site real.</p>
+      </div>
+      <div class="container_exibicao">
+      </div>
+    </section>
+    <script src="src/CSS_e_JS/script.js"></script>
   </body>
 </html>

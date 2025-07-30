@@ -1,0 +1,149 @@
+@media screen and (max-width: 900px) {
+  :root {
+    --imagemtamanho: 130px;
+    /* Define o tamanho dos icones das habilidades */
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  header ul {
+    display: none;
+  }
+
+  section,
+  header {
+    padding: 2% 0;
+  }
+
+  * {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .perfil-foto {
+    margin-top: 50px;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  #habilidades > p,
+  #projetos-mouse {
+    display: none;
+  }
+
+  .projeto {
+    margin-bottom: 100px;
+  }
+
+  .informacoes-projeto {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  #habilidades h1 {
+    margin: 10px 0;
+  }
+
+  .icons {
+    gap: 20px;
+  }
+
+  .icons > div,
+  .icons > div:hover {
+    width: 95%;
+    flex-direction: row;
+    height: 50vw;
+    margin: 10px 0;
+  }
+
+  .icons > div p {
+    min-width: 0;
+    margin-left: 0;
+    font-size: 100%;
+  }
+
+  .html {
+    background-color: #f15a2f;
+  }
+  .css {
+    background-color: #1776bc;
+  }
+  .js {
+    background-color: #f9b141;
+  }
+
+  .icons .js img {
+    width: var(--imagemtamanho);
+  }
+
+  /* WordPress */
+
+  .exibicao_imagens{
+    position: fixed;
+    top: 0;
+  }
+
+  .botoes_container > div{
+    position: fixed;
+    top: 80dvh;
+  }
+
+  .fechar{
+    display: block;
+    top: 60px !important;
+    right: 0;
+    background: rgba(255, 0, 0, 0.377) !important;
+    opacity: 0.8 !important;
+    font-size: 23px;
+    height: 50px !important;
+    width: 150px;
+    border-radius: 10px !important;
+    font-weight: 900;
+    align-content: center;
+  }
+
+  .biblioteca-wordpress {
+    padding: 0 5%;
+  }
+
+  .biblioteca-wordpress .projeto {
+    width: 100%;
+    max-width: calc(var(--tamanhoprojeto) + 100px);
+    height: calc(var(--tamanhoprojeto) * 1.8);
+  }
+
+  .alerta {
+    display: none;
+  }
+
+  .container_exibicao {
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .container_exibicao > img {
+    padding: 0 2%;
+  }
+
+  /* WordPress */
+
+  footer {
+    flex-direction: column-reverse;
+  }
+
+  footer i {
+    font-size: 40px;
+  }
+}
