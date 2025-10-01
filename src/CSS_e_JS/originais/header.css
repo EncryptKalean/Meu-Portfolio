@@ -46,11 +46,12 @@ header a {
   position: relative;
 }
 
-header a.show {
+header li:not(:first-of-type) a.show {
   background: rgba(255, 255, 255, 0.2);
 }
 
-header a::after {
+header a::after,
+header li:first-of-type a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -62,6 +63,7 @@ header a::after {
 }
 
 header a:hover::after,
-header a:focus::after {
+header a:focus::after,
+header li:first-of-type a.show::after {
   width: 100%;
 }
