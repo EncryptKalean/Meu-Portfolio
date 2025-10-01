@@ -1,0 +1,87 @@
+#projetos {
+  display: block;
+}
+
+#categoria_projetos_btns {
+  margin: 1rem 0 2rem;
+}
+
+#categoria_projetos_btns button {
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  border: 2px solid currentColor;
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  margin: 0 1rem;
+  font-size: 1.8rem;
+  transition: 0.5s;
+}
+
+#categoria_projetos_btns button:hover,
+.categoria_selecionada {
+  background-color: rgb(66, 0, 128) !important;
+}
+
+.container-projetos {
+  width: 100%;
+  min-height: calc(var(--tamanhoprojeto) + 30px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
+  margin: 2.5rem 0;
+}
+
+.projeto {
+  margin: 2rem auto;
+  width: calc(var(--tamanhoprojeto) - 100px);
+  max-width: var(--tamanhoprojeto);
+  aspect-ratio: 5/7;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px 0 rgba(137, 43, 226, 0.5);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.biblioteca-wordpress .projeto {
+  width: calc(var(--tamanhoprojeto) + 100px);
+  aspect-ratio: 9/14;
+}
+
+.informacoes-projeto {
+  position: absolute;
+  inset: 0;
+  padding: 5% 0.5em 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  line-height: 25px;
+  background: black !important;
+}
+
+.informacoes-projeto:hover,
+.informacoes-projeto:focus {
+  opacity: 0.9;
+}
+
+.informacoes-projeto h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.informacoes-projeto P {
+  font-size: 1.6rem;
+}
+
+/* WordPress */
+
+.biblioteca-wordpress {
+  display: none;
+}
+
+/* BTN */
+
+#projetos > a.git {
+  display: block;
+  margin-top: 20px;
+}

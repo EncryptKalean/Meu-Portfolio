@@ -1,0 +1,209 @@
+:root {
+  --corbase1: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(32, 1, 66, 1) 66%,
+    rgba(32, 11, 101, 1) 100%
+  ); /* Padrão de cores que aparece no inicio */
+
+  --corbase2: linear-gradient(
+    167deg,
+    rgba(23, 8, 29, 1) 0%,
+    rgba(14, 20, 47, 1) 100%
+  ); /* Padrão de cores do header */
+
+  --corbase3: rgb(112, 112, 112);
+  --imagemtamanho: 250px; /* Tamanho base dos icones de linguagem */
+  --tamanhoprojeto: 35rem; /* Tamanho inicial da preview dos projetos */
+  --alturadasection: 100dvh;
+  --animacoes: opacity 1.5s, filter 1.5s, transform 1.5s; /* Animações do Scroll Reveal*/
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: blue grey;
+}
+
+body {
+  font-size: 1.8rem;
+  color: #f5f5f5;
+  background: var(--corbase1);
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  list-style: none;
+  text-shadow: 1px 1px 1px black;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 1.2px;
+}
+
+*:focus-visible {
+  outline: 3px solid #4a90e2;
+  outline-offset: 5px;
+}
+
+/* -------------- SECTIONS -------------- */
+
+section {
+  padding: 5%;
+  min-height: var(--alturadasection);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--corbase3);
+}
+
+section:nth-of-type(2n + 1) {
+  background: var(--corbase1);
+}
+
+.container {
+  width: 50%;
+}
+
+.container > p {
+  margin-bottom: 30px;
+}
+
+a.git {
+  background-color: var(--corbase3);
+  font-size: 1.5em;
+  padding: 0.5em 5em;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border: 2px solid transparent;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  justify-self: center;
+  transition: 0.5s;
+  animation: anim1 4s linear infinite;
+}
+
+@keyframes anim1 {
+  0% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.05);
+    background: rgba(0, 0, 0, 0.3);
+    border-color: currentColor;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+a.git:hover,
+a.git:focus {
+  background: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 255, 255, 0.8);
+  border-color: currentColor;
+  transition: 0.5s;
+}
+
+h2 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+a,
+button {
+  color: inherit;
+}
+
+.wave {
+  height: 0;
+}
+
+.wave svg {
+  pointer-events: none;
+  transform: scaleY(0.3) translateY(-150%);
+  fill: url(#grad1);
+  filter: drop-shadow(0 10px 0 rgba(0, 0, 0, 0.3));
+}
+
+.wave:nth-of-type(even) svg {
+  fill: var(--corbase3);
+  transform: rotateY(180deg) scaleY(0.3) translateY(-150%);
+}
+
+/* ----- Scroll Reveal ----- */
+
+.hidden {
+  opacity: 0;
+  filter: blur(20px);
+  transform: translateX(-100%);
+  transition: var(--animacoes);
+}
+
+.hidden:nth-of-type(even) {
+  transform: translateX(100%);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0) !important;
+  transition: var(--animacoes);
+}
+
+/* -------- Footer */
+
+footer {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  color: inherit;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--corbase1);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+footer svg {
+  width: 100%;
+  color: inherit;
+  margin: 0;
+}
+
+footer a {
+  width: 45px;
+  aspect-ratio: 1;
+  padding: 0;
+  display: flex;
+  margin: 0 10px;
+  transition: 0.5s;
+  border-radius: 10px;
+  color: inherit;
+  border: 2px solid transparent;
+}
+
+footer a:hover,
+footer a:focus {
+  background: transparent;
+  border-color: currentColor;
+  transform: translateY(-5px);
+}
+
+@media (width < 50rem) {
+  footer {
+    flex-direction: column;
+  }
+}

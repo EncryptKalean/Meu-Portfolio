@@ -1,0 +1,67 @@
+:root {
+  --cor_html: #f15a2f;
+  --cor_css: #1776bc;
+  --cor_js: #c9861b;
+}
+
+#habilidades {
+  display: grid;
+  place-items: center;
+  min-height: calc(var(--alturadasection) - 50px);
+}
+
+#icons {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+#icons div {
+  width: calc(var(--imagemtamanho) - 55px);
+  height: var(--imagemtamanho);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+  padding: 1%;
+  gap: 5px;
+}
+
+#icons p {
+  min-width: calc(var(--imagemtamanho) + 8rem);
+}
+
+#icons svg {
+  display: block;
+  height: calc(var(--imagemtamanho) - 10px);
+  aspect-ratio: 1;
+  margin-left: -33px;
+  margin-right: -20px;
+  padding: 15px;
+  flex-shrink: 0;
+  filter: drop-shadow(4px 2px 0 rgba(0, 0, 0, 0.5));
+}
+
+#js img {
+  width: calc(var(--imagemtamanho) - 60px);
+  aspect-ratio: 8/9;
+  filter: drop-shadow(4px 2px 0 rgba(0, 0, 0, 0.5));
+}
+
+#icons > div:hover,
+#icons > div:focus {
+  width: calc(var(--imagemtamanho) * 2 + 50px);
+}
+
+#html:hover,
+#html:focus {
+  background-color: var(--cor_html);
+}
+#css:hover,
+#css:focus {
+  background-color: var(--cor_css);
+}
+#js:hover,
+#js:focus {
+  background-color: var(--cor_js);
+}

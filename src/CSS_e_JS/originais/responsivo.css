@@ -1,0 +1,114 @@
+@media (width < 75rem) {
+  /* Habilidades */
+
+  #habilidades > p {
+    display: none;
+  }
+
+  #icons {
+    margin-top: 30px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #icons > div {
+    width: 100%;
+    height: auto;
+    padding: 15px 5px;
+    gap: 10px;
+  }
+
+  #icons p {
+    min-width: auto;
+  }
+
+  #icons svg {
+    margin-left: -20px;
+    margin-right: -15px;
+  }
+
+  #js img {
+    width: calc(var(--imagemtamanho) - 50px);
+  }
+
+  #html {
+    background-color: var(--cor_html);
+  }
+  #css {
+    background-color: var(--cor_css);
+  }
+  #js {
+    background-color: var(--cor_js);
+  }
+}
+
+@media (width < 56.25rem) {
+  :root {
+    --imagemtamanho: 150px;
+    /* Define o tamanho dos icones das habilidades */
+    --animacoes: opacity 1s, filter 1s, transform 1s;
+  }
+
+  header ul,
+  #projetos-mouse {
+    display: none;
+  }
+
+  section,
+  header {
+    padding: 3% 5%;
+    flex-direction: column;
+  }
+
+  /* Inicio */
+
+  #inicio > div {
+    width: 100%;
+    margin: 50px 0 5rem;
+    text-align: center;
+  }
+
+  #inicio h1 {
+    font-size: 4rem;
+  }
+
+  /* SOBRE */
+
+  #sobre > div {
+    width: 100%;
+  }
+
+  /* Projetos */
+
+  .projeto {
+    width: 90%;
+  }
+
+  .informacoes-projeto {
+    opacity: 0.85;
+  }
+
+  .informacoes-projeto:hover {
+    opacity: 0;
+  }
+}
+
+@media (width < 37.5rem) {
+  :root {
+    --imagemtamanho: 120px;
+    /* Define o tamanho dos icones das habilidades */
+  }
+
+  body {
+    font-size: 1.7rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  a.git {
+    font-size: 1.3em;
+    border-radius: 15px;
+  }
+}

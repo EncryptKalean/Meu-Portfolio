@@ -1,0 +1,45 @@
+#inicio {
+  padding-top: 0;
+  margin-top: -50px;
+  text-align: left;
+}
+
+#inicio h1 {
+  font-size: 5.5rem;
+}
+
+#inicio p:first-of-type {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.perfil-foto {
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1;
+  border: 1px solid rgb(111, 0, 255);
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+/* SOBRE */
+
+#sobre {
+  gap: 50px;
+}
+
+#sobre img {
+  width: 100%;
+  max-width: 270px;
+  aspect-ratio: 1;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  box-shadow: -2px 7px 10px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}

@@ -1,0 +1,82 @@
+#botoes_container{
+    display: none;
+    position: sticky;
+    top: 45vh;
+    z-index: 11;
+}
+
+#botoes_container button{
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.3;
+    margin-top: 90px;
+    border-radius: 50%;
+    transition: 0.5s;
+    width: 9rem;
+    aspect-ratio: 1;
+    padding: 5px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#botoes_container button svg{
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+#botoes_container button:hover{
+    opacity: 0.8;
+}
+
+#seta_esquerda{
+    left: 0;
+    rotate: 180deg;
+}
+
+#seta_direita{
+    right: 0;
+}
+
+#fechar{
+    display: none;
+}
+
+/* ------------ SECTION IMAGENS */
+
+#exibicao_imagens{
+    display: none;
+    flex-direction: column;
+    /* width: 100%; */
+    min-height: 100vh;
+    padding: 50px 0 0;
+    overflow-x: hidden;
+}
+
+#alerta{
+    border-radius: 2rem;
+    background-color: var(--corbase3);
+    padding: 2%;
+    margin: 0 7%;
+    margin-bottom: 50px;
+}
+
+#alerta h2{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+#alerta p{
+    font-size: 2rem;
+}
+
+#container_exibicao{
+    display: flex;
+  overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+#container_exibicao img{
+    width: 100%;
+    transition: 1s;
+}
