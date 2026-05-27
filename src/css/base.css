@@ -1,0 +1,284 @@
+:root {
+  --cor-identidade: #7b2cbf;
+
+  --cor-alternativa: #05010d;
+
+  --cor-gradient: #d8b4fe;
+
+  --cor-alternativa-gradient: #f8fafc;
+
+  --gradient-tipo-um: linear-gradient(
+    -90deg,
+    var(--cor-alternativa),
+    var(--cor-identidade)
+  );
+
+  --gradient-tipo-dois: linear-gradient(
+    90deg,
+    var(--cor-alternativa-gradient),
+    var(--cor-gradient)
+  );
+
+  --cor-texto-um: #fff;
+
+  --cor-texto-dois: #1e293b;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+*:focus-visible {
+  outline: 3px solid #4a90e2;
+  outline-offset: 5px;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+  color: var(--cor-texto-um);
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  overflow-x: clip;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  overflow-x: clip;
+  position: relative;
+  min-height: 100%;
+  background: var(--gradient-tipo-um);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 5rem;
+  margin-bottom: 10px;
+}
+
+p,
+span {
+  font-size: 2rem;
+}
+
+section {
+  font-size: 1.8rem;
+  display: grid;
+  place-items: center;
+  min-height: 90dvh;
+  height: auto !important;
+  text-shadow: 1px 1px 5px
+    color-mix(in srgb, var(--cor-texto-dois), transparent 30%);
+  scroll-snap-align: center;
+  padding: 0 1%;
+}
+
+section:nth-of-type(even) {
+  background: var(--gradient-tipo-dois);
+  color: var(--cor-texto-dois);
+  text-shadow: 1px 1px
+    color-mix(in srgb, var(--cor-identidade), transparent 30%);
+}
+
+section#home {
+  scroll-snap-align: none;
+  min-height: 80dvh;
+}
+
+.center {
+  display: flex;
+  width: min(100%, 1200px);
+  height: auto !important;
+  flex-wrap: wrap;
+  align-items: center;
+  z-index: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.github-btn {
+  margin-top: min(3%, 20px);
+  place-self: center;
+  display: block;
+  width: clamp(200px, 90%, 400px);
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: var(--cor-texto-dois);
+  color: var(--cor-texto-um);
+  border: 2px solid transparent;
+  border-radius: 25px;
+  text-align: center;
+  padding: 10px 0;
+  animation: github-btn 1.5s linear alternate infinite;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  will-change: transform;
+}
+
+.github-btn:hover,
+.github-btn:focus {
+  background-color: var(--cor-texto-um);
+  color: var(--cor-identidade);
+}
+
+@keyframes github-btn {
+  to {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: currentColor;
+    transform: scale(1.05);
+  }
+}
+
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  background-color: var(--cor-alternativa-gradient);
+  color: var(--cor-identidade);
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 20;
+  font-size: 2.5rem;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+/* WAVE ----------------------------------------------------------- */
+/* WAVE ----------------------------------------------------------- */
+/* WAVE ----------------------------------------------------------- */
+
+#waveGradient stop:nth-child(2) {
+  transition: stop-color 1s;
+  stop-color: var(--cor-alternativa);
+}
+
+#waveGradient stop:nth-child(1) {
+  transition: stop-color 1s;
+  stop-color: var(--cor-identidade);
+}
+
+.wave {
+  --alturaWave: 150px;
+
+  display: block;
+  width: 100%;
+  transform-origin: top;
+  pointer-events: none;
+  fill: url(#waveGradient);
+  background: var(--gradient-tipo-dois);
+}
+
+.wave:nth-of-type(even) {
+  margin: var(--alturaWave) 0 calc(0px - var(--alturaWave));
+  transform: scaleY(-1);
+}
+
+.wave use {
+  filter: drop-shadow(0px 5px 0 rgba(0, 0, 0, 0.2));
+}
+
+/* SCROLL ANIMATION ----------------------------------------------------------- */
+/* SCROLL ANIMATION ----------------------------------------------------------- */
+/* SCROLL ANIMATION ----------------------------------------------------------- */
+
+@supports (animation-timeline: view()) {
+  .scroll-animation {
+    animation-name: fadeInScale;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry 5% cover 50%;
+
+    opacity: 0;
+    transform: translateX(-100px);
+    filter: blur(8px);
+    isolation: isolate;
+  }
+
+  .projeto.scroll-animation {
+    animation-range: entry 0% cover 30%;
+  }
+
+  .scroll-animation:nth-of-type(even) {
+    transform: translateX(100px);
+  }
+
+  @keyframes fadeInScale {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+      filter: blur(0);
+    }
+  }
+
+  @media (width < 70rem) {
+    .scroll-animation {
+      animation-range: entry 10% cover 25%;
+    }
+  }
+
+  @media (width < 56.25rem) {
+    .scroll-animation {
+      filter: blur(0);
+    }
+  }
+
+  @media (width < 37.5rem) {
+    .scroll-animation {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+
+    .scroll-animation:nth-of-type(even) {
+      transform: translateY(100px);
+    }
+
+    @keyframes fadeInScale {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+@media (width <= 60rem) {
+  .github-btn {
+    box-shadow: none;
+  }
+}

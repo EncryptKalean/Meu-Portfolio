@@ -1,0 +1,89 @@
+section#habilidades {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section#habilidades .center {
+  flex-direction: inherit;
+  gap: 5vw;
+  width: 100%;
+}
+
+#habilidades-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.habilidade {
+  --altura: 300px;
+  --cor_html: #f15a2f;
+  --cor_css: #1776bc;
+  --cor_js: #c9861b;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: var(--altura);
+  aspect-ratio: 0.87/1;
+  padding: 20px 0;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition:
+    aspect-ratio 0.5s,
+    background-color 0.5s,
+    color 0.5s;
+  overflow: hidden;
+}
+
+.habilidade:hover,
+.habilidade:focus {
+  aspect-ratio: 2.33/1;
+  color: var(--cor-texto-um);
+}
+
+.html:hover,
+.html:focus {
+  background-color: var(--cor_html);
+}
+
+.css:hover,
+.css:focus {
+  background-color: var(--cor_css);
+}
+
+.js:hover,
+.js:focus {
+  background-color: var(--cor_js);
+}
+
+.habilidade svg {
+  flex-shrink: 0;
+  height: 100%;
+  aspect-ratio: 1;
+  pointer-events: none;
+}
+
+.habilidade span {
+  min-width: var(--altura);
+}
+
+/* ANIMAÇÔES E DECORAÇÔES */
+
+@media (width >= 37.5rem) {
+  .habilidade svg {
+    filter: drop-shadow(
+      3px 3px 3px color-mix(in srgb, var(--cor-identidade), transparent 50%)
+    );
+  }
+
+  .habilidade:hover > *,
+  .habilidade:focus > * {
+    filter: drop-shadow(
+      3px 3px 3px color-mix(in srgb, var(--cor-alternativa), transparent 50%)
+    );
+  }
+}

@@ -1,0 +1,109 @@
+section#home .center,
+section#sobre .center {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#texto-home span {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+#texto-home h1 {
+  line-height: 50px;
+}
+
+#texto-home h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.imagem {
+  width: min(50%, 350px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  align-content: center;
+  justify-items: center;
+}
+
+#imagem-home {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: bottom;
+  z-index: 1;
+}
+
+/* BORDAS ANIMADAS ------------------------------------------------------- */
+
+@media (width > 27rem) {
+  :root {
+    --grossura-borda-animada: 2px;
+    --borda-animada-cores: transparent 40%, currentColor;
+  }
+
+  .borda-animada {
+    position: relative;
+  }
+
+  .borda-animada::after,
+  .borda-animada::before {
+    content: "";
+    position: absolute;
+    inset: calc(0px - var(--grossura-borda-animada));
+    border-radius: inherit;
+    background: conic-gradient(var(--borda-animada-cores));
+    animation: girar 3s linear infinite;
+    z-index: 0;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+
+  .borda-animada::after {
+    will-change: transform;
+  }
+
+  .borda-animada::before {
+    animation-play-state: paused;
+    opacity: 0;
+  }
+
+  @keyframes girar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@media (width > 60rem) {
+  :root {
+    --grossura-borda-animada: 1px;
+  }
+
+  .borda-animada::before {
+    animation-play-state: running;
+    filter: blur(8px);
+    will-change: transform;
+    opacity: 1;
+  }
+}
+
+/* SOBRE MIM ---------------------------------- */
+
+#imagem-sobre {
+  width: min(90%, 270px);
+  object-fit: cover;
+  object-position: center;
+}
+
+#texto-sobre {
+  width: calc(90% - min(90%, 270px));
+  text-align: center;
+}

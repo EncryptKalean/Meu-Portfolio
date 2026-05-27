@@ -1,0 +1,112 @@
+header {
+  position: sticky;
+  top: -1px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0.5% 3%;
+  z-index: 10;
+}
+
+header p {
+  font-size: 3.3rem;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+header nav a {
+  position: relative;
+  color: var(--cor-texto-um);
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+
+header a::before {
+  content: "";
+  position: absolute;
+  transform-origin: left;
+  width: 120%;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%) scaleX(0);
+  height: 2px;
+  background-color: currentColor;
+  opacity: 0.8;
+  transition: transform 0.7s;
+  isolation: isolate;
+}
+
+header a:hover::before,
+header a:focus::before,
+a.section-atual::before {
+  transform: translateX(-50%) scaleX(1);
+}
+
+@supports not (animation-timeline: view()) {
+  /* fallback com JS */
+  header {
+    transition: background-color 0.3s;
+  }
+
+  header.show {
+    background-color: var(--cor-identidade);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  header {
+    animation: onSticky linear;
+    animation-fill-mode: forwards;
+    animation-timeline: view(block);
+    animation-range: exit 0% exit 10%;
+  }
+
+  @keyframes onSticky {
+    to {
+      background-color: var(--cor-identidade);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+/* FOOTER ------------------------------------------------------------- */
+/* FOOTER ------------------------------------------------------------- */
+/* FOOTER ------------------------------------------------------------- */
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 0;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#footer-icons {
+  display: flex;
+  gap: 5%;
+}
+
+footer svg {
+  height: 40px;
+  aspect-ratio: 1;
+}
+
+footer a {
+  color: var(--cor-texto-um);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition:
+    border 0.3s,
+    transform 0.3s;
+}
+
+footer a:hover {
+  border-color: currentColor;
+  transform: translateY(-3px);
+}

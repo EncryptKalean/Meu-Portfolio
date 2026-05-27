@@ -1,0 +1,25 @@
+{
+  "id": "./",
+  "name": "Portfólio de Kauan Leandro - Desenvolvedor Front-end",
+  "short_name": "Portfólio Kauan Leandro",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#05010d",
+  "theme_color": "#7b2cbf",
+  "description": "Versão app do Portfólio de Kauan Leandro",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "icons": [
+    {
+      "src": "src/imagens/APP-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "src/imagens/APP-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
